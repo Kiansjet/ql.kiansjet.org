@@ -1,4 +1,4 @@
 {
-	"test1": "https://google.com",
-	"test2": "https://bing.com"
+	"google": "https://google.com",
+	"bing": "https://bing.com"
 }
