@@ -25,11 +25,10 @@ $(document).ready(function() {
 			if (quickLinkResult) {
 				document.location = quickLinkResult
 			} else {
-				redirectText.innerHTML = `${quickLink} is not a valid QuickLink.`
+				redirectText.innerHTML = `\"${quickLink}\" is not a valid QuickLink.`
 			}
 		}).catch(function(err) {
 			redirectText.innerHTML(`QuickLink JSON file failed to load:\n${err}`)
 		})
-		//let quickLinksArray = JSON.parse(QuickLinks)
 	}
 })
