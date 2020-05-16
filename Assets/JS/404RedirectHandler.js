@@ -22,8 +22,6 @@ $(document).ready(function() {
 	
 		// Parse QuickLinks
 		$.getJSON('Assets/JSON/QuickLinks.json',function(quickLinksArray) {
-			console.log(`JSON array is ${quickLinksArray}`)
-
 			let quickLinkResult = quickLinksArray[quickLink]
 
 			if (quickLinkResult) {
