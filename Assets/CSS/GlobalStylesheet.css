@@ -1,5 +1,5 @@
 /* Google Fonts - Jost */
-@import url("https://fonts.googleapis.com/css2?family=Jost&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@400;500&display=swap");
 
 html {
     font-family: "Jost", sans-serif;
@@ -10,6 +10,15 @@ body {
     color: rgb(50, 50, 50);
 }
 
+h1,h2,h3,h4 {
+    font-weight: 500;
+}
+
+a {
+    text-decoration-line: none;
+    color: blue;
+}
+
 input {
     outline: none;
     border: none;
@@ -17,9 +26,4 @@ input {
     padding: .5em;
     width: 21em;
     max-width: 100%;
-}
-
-a {
-    text-decoration-line: none;
-    color: blue;
 }
