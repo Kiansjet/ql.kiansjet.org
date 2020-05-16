@@ -1,4 +1,4 @@
-// Runs on the siteRoot/404.html proxy page and handles all redirection.
+// Runs on the siteRoot/404.html standin page and handles all redirection.
 
 $(document).ready(function() {
 	let pathname = document.location.pathname
@@ -9,12 +9,12 @@ $(document).ready(function() {
 		// Page is loaded locally. Forget everything else.
 		redirectText.innerHTML = "Page loaded locally. Function disabled."
 		document.title = "Redirect failed."
-	} else if (pathname == "404.html") {
+	} else if (pathname == "/404.html") {
 		// Page was loaded directly, display rejection text.
 		redirectText.innerHTML = "You directly navigated to this page. Nothing will happen."
 		document.title = "Redirect failed."
 	} else {
-		// 404 page has been loaded as a proxy for a missing page.
+		// 404 page has been loaded as a standin for a missing page.
 	
 		// Remove the first character from the pathname as its always a /
 		let quickLink = pathname.substring(1)

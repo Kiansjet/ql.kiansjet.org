@@ -1,7 +1,26 @@
 <head>
 	<title>Kiansjet's QuickLinks</title>
+
+	<!-- Global Stylesheet -->
+	<link rel="stylesheet" type="text/css" href="Assets/CSS/GlobalStylesheet.css">
+
+	<!-- Page-specific Stylesheet -->
+	<link rel="stylesheet" type="text/css" href="Assets/CSS/index.css">
+
+	<!-- Page-specific JS -->
+	<script src="Assets/JS/index.js"></script>
 </head>
 
 <body>
-	<p>This subdomain is a pseudo goo.gl. The source code is <a href="qlGitHub">here.</a></p>
+	<h1>Kiansjet's QuickLinks</h2>
+	<input id="quickLinkSearchBox" type="search" autofocus placeholder="Type a QuickLink here and press Enter">
+	<hr>
+	<h2>A bodged QuickLinks service similar to <a href="https://bit.ly">Bit.ly</a> and the now discontinued <a href="https://goo.gl">Goo.gl</a>.</h2>
+	<p>You can find the source code <a href="qlGitHub">here</a>, but please do not use this as a secure QuickLinks service.</p>
+
+	<ul>
+		<li>This service is as clientside as possible (It is hosted on GitHub Pages and backed by CloudFlare).</li>
+		<li>Every time you navigate to a QuickLink, the entire QuickLinks directory is loaded by your client and parsed for the relevant QuickLink.</li>
+		<li>Due to this quasi-serverless model, all QuickLinks are public (you can view them <a href="Assets/JSON/QuickLinks.json">here</a>), so don't use forks of this service to secretly create QuickLinks.</li>
+	</ul>
 </body>
