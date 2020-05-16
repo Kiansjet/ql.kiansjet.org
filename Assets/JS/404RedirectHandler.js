@@ -30,7 +30,7 @@ $(document).ready(function() {
 				document.title = "Redirect failed."
 			}
 		}).catch(function(err) {
-			redirectText.innerHTML(`QuickLink JSON file failed to load:\n${err}`)
+			redirectText.innerHTML = `QuickLink JSON file failed to load:\n${err}`
 			document.title = "Redirect failed."
 		})
 	}
