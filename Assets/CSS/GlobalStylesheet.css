@@ -27,3 +27,15 @@ input {
     width: 21em;
     max-width: 100%;
 }
+
+/* Noscript warning boxes */
+.noScriptWarningBox {
+    border-radius: .25em;
+    background-color: rgb(255, 60, 60);
+    padding: .5em;
+}
+
+.noScriptWarningBox h4 {
+    margin: 0;
+    color: white;
+}
