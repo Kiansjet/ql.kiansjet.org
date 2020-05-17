@@ -50,21 +50,5 @@ document.addEventListener("readystatechange",function() {
 			redirectText.innerHTML = formstrings.quickLinkLoadFailPrintoutFormattable.replace("%s",error)
 			document.title = strings.redirectFailed
 		})
-
-		/*
-		$.getJSON("Assets/JSON/QuickLinks.json",function(quickLinksArray) {
-			let quickLinkResult = quickLinksArray[quickLink]
-
-			if (quickLinkResult) {
-				document.location = quickLinkResult
-			} else {
-				redirectText.innerHTML = `\"${quickLink}\" is not a valid QuickLink. QuickLinks are case-sensetive.`
-				document.title = strings.redirectFailed
-			}
-		}).catch(function(error) {
-			redirectText.innerHTML = formstrings.quickLinkLoadFailPrintoutFormattable.replace("%s",error)
-			document.title = strings.redirectFailed
-		})
-		*/
 	}
 })
