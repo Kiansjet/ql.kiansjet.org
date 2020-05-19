@@ -45,6 +45,9 @@ document.addEventListener("readystatechange",function() {
 					redirectText.innerHTML = strings.invalidQuickLinkFormattable.replace("%s",quickLink)
 					document.title = strings.redirectFailed
 				}
+			}).catch(function(error) {
+				redirectText.innerHTML = formstrings.quickLinkLoadFailPrintoutFormattable.replace("%s",error)
+				document.title = strings.redirectFailed
 			})
 		}).catch(function(error) {
 			redirectText.innerHTML = formstrings.quickLinkLoadFailPrintoutFormattable.replace("%s",error)
