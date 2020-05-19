@@ -35,7 +35,7 @@ document.addEventListener("readystatechange",function() {
 		let quickLink = pathname.substring(1)
 	
 		// Parse QuickLinks
-		fetch("Assets/JSON/QuickLinks.json").then(function(response) {
+		fetch("/Assets/JSON/QuickLinks.json").then(function(response) {
 			response.json().then(function(quickLinksObject) {
 				let quickLinkResult = quickLinksObject[quickLink]
 

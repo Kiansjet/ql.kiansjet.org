@@ -9,7 +9,7 @@ document.addEventListener("readystatechange",function() {
     let quickLinkSearchBox = document.getElementById("quickLinkSearchBox")
 
     quickLinkSearchBox.addEventListener("search",function() {
-        document.location = quickLinkSearchBox.value
+        document.location = document.location.origin + "/" + quickLinkSearchBox.value
     })
 
 })
