@@ -1,16 +1,19 @@
 // Runs on the siteRoot/404.html standin page and handles all redirection.
 
 const strings = {
-	redirecting: "Redirecting...",
-	redirectFailed: "Redirect failed.",
-	pageLoadedLocally: "Page loaded locally. Function disabled.",
-	directNavigation: "You directly navigated to this page. Nothing will happen.",
+	redirecting								: "Redirecting...",
+	redirectFailed							: "Redirect failed.",
+	pageLoadedLocally						: "Page loaded locally. Function disabled.",
+	directNavigation						: "You directly navigated to this page. Nothing will happen.",
 
-	invalidQuickLinkFormattable: "%s is not a valid QuickLink. QuickLinks are case-sensetive.",
-	quickLinkLoadFailPrintoutFormattable: "QuickLink JSON file failed to load:\n%s"
+	invalidQuickLinkFormattable				: "%s is not a valid QuickLink. QuickLinks are case-sensetive.",
+	quickLinkLoadFailPrintoutFormattable	: "QuickLink JSON file failed to load:\n%s"
 }
 
-document.addEventListener("readystatechange",function() {
+main()
+document.addEventListener("readystatechange",main)
+
+function main() {
 	if (!document.readyState) {
         return
 	}
@@ -54,4 +57,4 @@ document.addEventListener("readystatechange",function() {
 			document.title = strings.redirectFailed
 		})
 	}
-})
+}

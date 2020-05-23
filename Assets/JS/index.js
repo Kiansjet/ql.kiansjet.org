@@ -1,15 +1,23 @@
 // Runs on siteRoot/index.html
 
-// Just wait for the enter key on the search box and navigate
-document.addEventListener("readystatechange",function() {
+main()
+document.addEventListener("readystatechange",main)
+
+function main() {
     if (!document.readyState) {
         return
     }
 
+    // Handle compatibility QuickLink mode
+    let firstURLSearchParamKey = new URLSearchParams(document.location).keys().next().value
+    if (firstURLSearchParamKey) {
+        document.location = document.location.origin + "/" + firstURLSearchParamKey
+    }
+
+    // Handle QuickLink search box
     let quickLinkSearchBox = document.getElementById("quickLinkSearchBox")
 
     quickLinkSearchBox.addEventListener("search",function() {
         document.location = document.location.origin + "/" + quickLinkSearchBox.value
     })
-
-})
+}
