@@ -1,17 +1,17 @@
 // Runs on siteRoot/index.html
 
+// Handle compatibility QuickLink mode
+let firstURLSearchParamKey = new URLSearchParams(document.location.search).keys().next().value
+if (firstURLSearchParamKey) {
+    document.location = document.location.origin + "/" + firstURLSearchParamKey
+}
+
 main()
 document.addEventListener("readystatechange",main)
 
 function main() {
     if (!document.readyState) {
         return
-    }
-
-    // Handle compatibility QuickLink mode
-    let firstURLSearchParamKey = new URLSearchParams(document.location.search).keys().next().value
-    if (firstURLSearchParamKey) {
-        document.location = document.location.origin + "/" + firstURLSearchParamKey
     }
 
     // Handle QuickLink search box
