@@ -9,7 +9,7 @@ function main() {
     }
 
     // Handle compatibility QuickLink mode
-    let firstURLSearchParamKey = new URLSearchParams(document.location.href).keys().next().value
+    let firstURLSearchParamKey = new URLSearchParams(document.location.search).keys().next().value
     if (firstURLSearchParamKey) {
         document.location = document.location.origin + "/" + firstURLSearchParamKey
     }
