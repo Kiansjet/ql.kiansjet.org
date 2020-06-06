@@ -19,6 +19,10 @@ a {
     color: blue;
 }
 
+a:hover {
+    text-decoration-line: underline;
+}
+
 input {
     outline: none;
     border: none;
