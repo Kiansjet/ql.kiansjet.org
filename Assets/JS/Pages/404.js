@@ -11,7 +11,7 @@ const strings = {
 }
 
 main()
-document.addEventListener("readystatechange",main)
+document.addEventListener("readystatechange", main)
 
 function main() {
 	if (!document.readyState) {
@@ -45,15 +45,15 @@ function main() {
 				if (quickLinkResult) {
 					document.location = quickLinkResult
 				} else {
-					redirectText.innerHTML = strings.invalidQuickLinkFormattable.replace("%s",quickLink)
+					redirectText.innerHTML = strings.invalidQuickLinkFormattable.replace("%s", quickLink)
 					document.title = strings.redirectFailed
 				}
 			}).catch(function(error) {
-				redirectText.innerHTML = formstrings.quickLinkLoadFailPrintoutFormattable.replace("%s",error)
+				redirectText.innerHTML = formstrings.quickLinkLoadFailPrintoutFormattable.replace("%s", error)
 				document.title = strings.redirectFailed
 			})
 		}).catch(function(error) {
-			redirectText.innerHTML = formstrings.quickLinkLoadFailPrintoutFormattable.replace("%s",error)
+			redirectText.innerHTML = formstrings.quickLinkLoadFailPrintoutFormattable.replace("%s", error)
 			document.title = strings.redirectFailed
 		})
 	}

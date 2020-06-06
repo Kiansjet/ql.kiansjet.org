@@ -7,7 +7,7 @@ if (firstURLSearchParamKey) {
 }
 
 main()
-document.addEventListener("readystatechange",main)
+document.addEventListener("readystatechange", main)
 
 function main() {
     if (!document.readyState) {
@@ -17,7 +17,7 @@ function main() {
     // Handle QuickLink search box
     let quickLinkSearchBox = document.getElementById("quickLinkSearchBox")
 
-    quickLinkSearchBox.addEventListener("search",function() {
+    quickLinkSearchBox.addEventListener("search", function() {
         document.location = document.location.origin + "/" + quickLinkSearchBox.value
     })
 }
