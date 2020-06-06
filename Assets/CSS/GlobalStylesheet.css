@@ -24,18 +24,24 @@ input {
     border: none;
 
     padding: .5em;
-    width: 21em;
-    max-width: 100%;
+    width: -webkit-fill-available;
 }
 
 /* Noscript warning boxes */
 .noScriptWarningBox {
-    border-radius: .25em;
-    background-color: rgb(255, 60, 60);
+    position: sticky;
+    top: 1em; /* Conforms to the overall margin of the boy element defined in the body {}*/
+    box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.3); /* offset-x | offset-y | blur-radius | spread-radius | color */
+    background-color: rgb(255, 70, 70);
     padding: .5em;
 }
 
 .noScriptWarningBox h4 {
     margin: 0;
     color: white;
+}
+
+.noScriptWarningBox a {
+    color: white;
+    text-decoration-line: underline;
 }
