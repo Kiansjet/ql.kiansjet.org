@@ -2,50 +2,50 @@
 @import url("https://fonts.googleapis.com/css2?family=Jost:wght@400;500&display=swap");
 
 html {
-    font-family: "Jost", sans-serif;
+	font-family: "Jost", sans-serif;
 }
 
 body {
-    margin: 1em;
-    color: rgb(50, 50, 50);
+	margin: 1em;
+	color: rgb(50, 50, 50);
 }
 
 h1,h2,h3,h4 {
-    font-weight: 500;
+	font-weight: 500;
 }
 
 a {
-    text-decoration-line: none;
-    color: blue;
+	text-decoration-line: none;
+	color: blue;
 }
 
 a:hover {
-    text-decoration-line: underline;
+	text-decoration-line: underline;
 }
 
 input {
-    outline: none;
-    border: none;
+	outline: none;
+	border: none;
 
-    padding: .5em;
-    width: -webkit-fill-available;
+	padding: .5em;
+	width: -webkit-fill-available;
 }
 
 /* Noscript warning boxes */
 .noScriptWarningBox {
-    position: sticky;
-    top: 1em; /* Conforms to the overall margin of the boy element defined in the body {}*/
-    box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.3); /* offset-x | offset-y | blur-radius | spread-radius | color */
-    background-color: rgb(255, 70, 70);
-    padding: .5em;
+	position: sticky;
+	top: 1em; /* Conforms to the overall margin of the boy element defined in the body {}*/
+	box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.3); /* offset-x | offset-y | blur-radius | spread-radius | color */
+	background-color: rgb(255, 70, 70);
+	padding: .5em;
 }
 
 .noScriptWarningBox h4 {
-    margin: 0;
-    color: white;
+	margin: 0;
+	color: white;
 }
 
 .noScriptWarningBox a {
-    color: white;
-    text-decoration-line: underline;
+	color: white;
+	text-decoration-line: underline;
 }
