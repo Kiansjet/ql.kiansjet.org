@@ -35,17 +35,25 @@ function main() {
 		// 404 page has been loaded as a standin for a missing page.
 	
 		// Remove the first character from the pathname as its always a /
-		let quickLink = pathname.substring(1)
+		let quickLinkKey = pathname.substring(1)
 	
 		// Parse QuickLinks
 		fetch("/Assets/JSON/QuickLinks.json").then(function(response) {
 			response.json().then(function(quickLinksObject) {
-				let quickLinkResult = quickLinksObject[quickLink]
+				quickLinksObject = quickLinksObject.QuickLinks
+				let quickLinkObject = quickLinksObject[quickLinkKey]
 
-				if (quickLinkResult) {
-					document.location = quickLinkResult
+				if (quickLinkObject) {
+					switch (quickLinkObject.type) {
+						case (0): {
+							document.location = quickLinkObject.data
+						}
+						case (1): {
+
+						}
+					}
 				} else {
-					redirectText.innerHTML = strings.invalidQuickLinkFormattable.replace("%s", quickLink)
+					redirectText.innerHTML = strings.invalidQuickLinkFormattable.replace("%s", quickLinkKey)
 					document.title = strings.redirectFailed
 				}
 			}).catch(function(error) {

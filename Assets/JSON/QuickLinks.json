@@ -1,10 +1,43 @@
 {
-	"google": "https://google.com",
-	"bing": "https://bing.com",
-	"qlGitHub": "https://github.com/Kiansjet/ql.kiansjet.org",
-	"2019-uhs-per4physics": "https://sites.google.com/view/kiansjet-2019-uhs-per4physics",
-	"2020-uhs-kinneyAllPurposeDiscord": "https://discord.gg/xd7pdz4",
+	"_Comments": {
+		"All comments relevant to the QuickLinks object here": true,
 
-	"ContactMe": "https://twitter.com/Kiansjet",
-	"KianTwitter": "https://twitter.com/Kiansjet"
+		"QuickLink types breakdown:": true,
+		"0: Plain text redirect. Set document.location to the data value.": true,
+		"1: [NOT IMPLEMENTED] Encrypted redirect. User will be shown an input field to type the decrpytion key used to decrypt the data value clientside.": true
+	},
+
+	"QuickLinks": {
+		"google": {
+			"type": 0,
+			"data": "https://google.com"
+		},
+		"bing" : {
+			"type": 0,
+			"data": "https://bing.com"
+		},
+		"qlGitHub": {
+			"type": 0,
+			"data": "https://github.com/Kiansjet/ql.kiansjet.org"
+		},
+		"2019-uhs-per4physics": {
+			"_Comment": "Should be flagged for removal",
+			"type": 0,
+			"data": "https://sites.google.com/view/kiansjet-2019-uhs-per4physics"
+		},
+		"2020-uhs-kinneyAllPurposeDiscord": {
+			"_Comment": "Should be flagged for removal",
+			"type": 0,
+			"data": "https://discord.gg/xd7pdz4"
+		},
+
+		"ContactMe": {
+			"type": 0,
+			"data": "https://twitter.com/Kiansjet"
+		},
+		"KianTwitter": {
+			"type": 0,
+			"data": "https://twitter.com/Kiansjet"
+		}
+	}
 }
