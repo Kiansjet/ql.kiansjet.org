@@ -16,10 +16,17 @@
 			"type": 0,
 			"data": "https://bing.com"
 		},
+
 		"qlGitHub": {
 			"type": 0,
 			"data": "https://github.com/Kiansjet/ql.kiansjet.org"
 		},
+
+		"wys-youtube": {
+			"type": 0,
+			"data": "https://www.youtube.com/channel/UC4tcjhNQqiQ8LmVXW46wTsg"
+		},
+
 		"2019-uhs-per4physics": {
 			"_Comment": "Should be flagged for removal",
 			"type": 0,
