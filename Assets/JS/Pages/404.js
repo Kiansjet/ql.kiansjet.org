@@ -7,7 +7,7 @@ const strings = {
 	directNavigation						: "You directly navigated to this page.<br>Nothing will happen.",
 
 	invalidQuickLinkFormattable				: "%s is not a valid QuickLink. QuickLinks are case-sensetive.",
-	quickLinkLoadFailPrintoutFormattable	: "QuickLink JSON file failed to load:\n%s"
+	quickLinkLoadFailPrintoutFormattable	: "QuickLink JSON file failed to load:<br>%s"
 }
 
 main()
