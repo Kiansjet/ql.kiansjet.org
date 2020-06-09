@@ -1,10 +1,10 @@
-// Runs on the siteRoot/404.html standin page and handles all redirection.
+// Runs on siteRoot/404.html
 
 const strings = {
 	redirecting								: "Redirecting...",
 	redirectFailed							: "Redirect failed.",
 	pageLoadedLocally						: "Page loaded locally. Function disabled.",
-	directNavigation						: "You directly navigated to this page. Nothing will happen.",
+	directNavigation						: "You directly navigated to this page.<br>Nothing will happen.",
 
 	invalidQuickLinkFormattable				: "%s is not a valid QuickLink. QuickLinks are case-sensetive.",
 	quickLinkLoadFailPrintoutFormattable	: "QuickLink JSON file failed to load:\n%s"
