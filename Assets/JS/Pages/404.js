@@ -10,14 +10,7 @@ const strings = {
 	quickLinkLoadFailPrintoutFormattable	: "QuickLink JSON file failed to load:<br>%s"
 }
 
-main()
-document.addEventListener("readystatechange", main)
-
-function main() {
-	if (!document.readyState) {
-        return
-	}
-	
+document.addEventListener("readystatechange", function() {
 	let pathname = document.location.pathname
 
 	let redirectText = document.getElementById("redirectText")
@@ -65,4 +58,4 @@ function main() {
 			document.title = strings.redirectFailed
 		})
 	}
-}
+})
