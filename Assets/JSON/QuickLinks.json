@@ -45,6 +45,19 @@
 		"KianTwitter": {
 			"type": 0,
 			"data": "https://twitter.com/Kiansjet"
+		},
+
+		"ytprototype-gbNf": {
+			"type": 0,
+			"data": "https://www.youtube.com/watch?v=CEPcGv5Pa14"
+		},
+		"ytprototype-kOsi": {
+			"type": 0,
+			"data": "https://www.youtube.com/watch?v=8r_fEkmi9Xo"
+		},
+		"ytprototype-WNmP": {
+			"type": 0,
+			"data": "https://www.youtube.com/watch?v=9LjuMYihBqg"
 		}
 	}
 }
