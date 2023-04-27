@@ -1,0 +1,13 @@
+<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/">
+
+	<!-- I took out an extra mozilla specific stuff cuz if it doesnt work with the bare spec thats on them -->
+
+	<InputEncoding>[UTF-8]</InputEncoding>
+
+	<ShortName>ql.Kiansjet.org</ShortName>
+	<Description>Kiansjet's QuickLinks</Description>
+	<Image type="image/x-icon">/Assets/Images/QuickLinksIcon/Favicon64.png</Image>
+
+	<Url type="text/html" template="/{searchTerms}" />
+
+</OpenSearchDescription>
