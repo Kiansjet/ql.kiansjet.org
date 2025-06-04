@@ -22,20 +22,14 @@
 			"data": "https://github.com/Kiansjet/ql.kiansjet.org"
 		},
 
+		"KianGPT": {
+			"type": 0,
+			"data": "https://chat.kiansjet.org"
+		},
+
 		"wys-youtube": {
 			"type": 0,
 			"data": "https://www.youtube.com/channel/UC4tcjhNQqiQ8LmVXW46wTsg"
-		},
-
-		"2019-uhs-per4physics": {
-			"_Comment": "Should be flagged for removal",
-			"type": 0,
-			"data": "https://sites.google.com/view/kiansjet-2019-uhs-per4physics"
-		},
-		"2020-uhs-kinneyAllPurposeDiscord": {
-			"_Comment": "Should be flagged for removal",
-			"type": 0,
-			"data": "https://discord.gg/xd7pdz4"
 		},
 
 		"ContactMe": {
@@ -45,19 +39,6 @@
 		"KianTwitter": {
 			"type": 0,
 			"data": "https://twitter.com/Kiansjet"
-		},
-
-		"ytprototype-gbNf": {
-			"type": 0,
-			"data": "https://www.youtube.com/watch?v=CEPcGv5Pa14"
-		},
-		"ytprototype-kOsi": {
-			"type": 0,
-			"data": "https://www.youtube.com/watch?v=8r_fEkmi9Xo"
-		},
-		"ytprototype-WNmP": {
-			"type": 0,
-			"data": "https://www.youtube.com/watch?v=9LjuMYihBqg"
 		}
 	}
 }
