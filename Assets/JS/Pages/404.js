@@ -14,15 +14,15 @@ document.addEventListener("readystatechange", function() {
 	let pathname = document.location.pathname
 
 	let redirectText = document.getElementById("redirectText")
-	redirectText.innerHTML = strings.redirecting
+	redirectText.textContent = strings.redirecting
 
 	if (!document.location.host) {
 		// Page is loaded locally. Forget everything else.
-		redirectText.innerHTML = strings.pageLoadedLocally
+		redirectText.textContent = strings.pageLoadedLocally
 		document.title = strings.redirectFailed
 	} else if (pathname == "/404.html") {
 		// Page was loaded directly, display rejection text.
-		redirectText.innerHTML = strings.directNavigation
+		redirectText.textContent = strings.directNavigation
 		document.title = strings.redirectFailed
 	} else {
 		// 404 page has been loaded as a standin for a missing page.
@@ -46,15 +46,15 @@ document.addEventListener("readystatechange", function() {
 						}
 					}
 				} else {
-					redirectText.innerHTML = strings.invalidQuickLinkFormattable.replace("%s", quickLinkKey)
+					redirectText.textContent = strings.invalidQuickLinkFormattable.replace("%s", quickLinkKey)
 					document.title = strings.redirectFailed
 				}
 			}).catch(function(error) {
-				redirectText.innerHTML = formstrings.quickLinkLoadFailPrintoutFormattable.replace("%s", error)
+				redirectText.textContent = formstrings.quickLinkLoadFailPrintoutFormattable.replace("%s", error)
 				document.title = strings.redirectFailed
 			})
 		}).catch(function(error) {
-			redirectText.innerHTML = formstrings.quickLinkLoadFailPrintoutFormattable.replace("%s", error)
+			redirectText.textContent = formstrings.quickLinkLoadFailPrintoutFormattable.replace("%s", error)
 			document.title = strings.redirectFailed
 		})
 	}
