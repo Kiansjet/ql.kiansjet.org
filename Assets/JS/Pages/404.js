@@ -10,6 +10,25 @@ const strings = {
 	quickLinkLoadFailPrintoutFormattable	: "QuickLink JSON file failed to load:<br>%s"
 }
 
+const escapeHTML = function(value) {
+	return String(value).replace(/[&<>"']/g, function(character) {
+		switch (character) {
+			case "&":
+				return "&amp;"
+			case "<":
+				return "&lt;"
+			case ">":
+				return "&gt;"
+			case "\"":
+				return "&quot;"
+			case "'":
+				return "&#39;"
+			default:
+				return character
+		}
+	})
+}
+
 document.addEventListener("readystatechange", function() {
 	let pathname = document.location.pathname
 
@@ -44,18 +63,18 @@ document.addEventListener("readystatechange", function() {
 						case (1): {
 
 						}
-					}
-				} else {
-					redirectText.innerHTML = strings.invalidQuickLinkFormattable.replace("%s", quickLinkKey)
-					document.title = strings.redirectFailed
 				}
-			}).catch(function(error) {
-				redirectText.innerHTML = formstrings.quickLinkLoadFailPrintoutFormattable.replace("%s", error)
+			} else {
+				redirectText.innerHTML = strings.invalidQuickLinkFormattable.replace("%s", escapeHTML(quickLinkKey))
 				document.title = strings.redirectFailed
-			})
+			}
 		}).catch(function(error) {
-			redirectText.innerHTML = formstrings.quickLinkLoadFailPrintoutFormattable.replace("%s", error)
+			redirectText.innerHTML = strings.quickLinkLoadFailPrintoutFormattable.replace("%s", escapeHTML(error))
 			document.title = strings.redirectFailed
 		})
-	}
+	}).catch(function(error) {
+		redirectText.innerHTML = strings.quickLinkLoadFailPrintoutFormattable.replace("%s", escapeHTML(error))
+		document.title = strings.redirectFailed
+	})
+}
 })
