@@ -32,6 +32,10 @@
 			"data": "https://www.youtube.com/channel/UC4tcjhNQqiQ8LmVXW46wTsg"
 		},
 
+		"KianAppointmentBooking": {
+			"type": 0,
+			"data": "https://calendar.app.google/CvG9B8wfCvu2KvKd6"
+		},
 		"ContactMe": {
 			"type": 0,
 			"data": "https://twitter.com/Kiansjet"
