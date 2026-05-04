@@ -10,19 +10,29 @@ const strings = {
 	quickLinkLoadFailPrintoutFormattable	: "QuickLink JSON file failed to load:<br>%s"
 }
 
+function setRedirectText(redirectText, message) {
+	redirectText.textContent = ""
+	String(message).split("<br>").forEach(function(line, index) {
+		if (index > 0) {
+			redirectText.appendChild(document.createElement("br"))
+		}
+		redirectText.append(line)
+	})
+}
+
 document.addEventListener("readystatechange", function() {
 	let pathname = document.location.pathname
 
 	let redirectText = document.getElementById("redirectText")
-	redirectText.textContent = strings.redirecting
+	setRedirectText(redirectText, strings.redirecting)
 
 	if (!document.location.host) {
 		// Page is loaded locally. Forget everything else.
-		redirectText.textContent = strings.pageLoadedLocally
+		setRedirectText(redirectText, strings.pageLoadedLocally)
 		document.title = strings.redirectFailed
 	} else if (pathname == "/404.html") {
 		// Page was loaded directly, display rejection text.
-		redirectText.textContent = strings.directNavigation
+		setRedirectText(redirectText, strings.directNavigation)
 		document.title = strings.redirectFailed
 	} else {
 		// 404 page has been loaded as a standin for a missing page.
@@ -46,15 +56,15 @@ document.addEventListener("readystatechange", function() {
 						}
 					}
 				} else {
-					redirectText.textContent = strings.invalidQuickLinkFormattable.replace("%s", quickLinkKey)
+					setRedirectText(redirectText, strings.invalidQuickLinkFormattable.replace("%s", quickLinkKey))
 					document.title = strings.redirectFailed
 				}
 			}).catch(function(error) {
-				redirectText.textContent = formstrings.quickLinkLoadFailPrintoutFormattable.replace("%s", error)
+				setRedirectText(redirectText, strings.quickLinkLoadFailPrintoutFormattable.replace("%s", error))
 				document.title = strings.redirectFailed
 			})
 		}).catch(function(error) {
-			redirectText.textContent = formstrings.quickLinkLoadFailPrintoutFormattable.replace("%s", error)
+			setRedirectText(redirectText, strings.quickLinkLoadFailPrintoutFormattable.replace("%s", error))
 			document.title = strings.redirectFailed
 		})
 	}
